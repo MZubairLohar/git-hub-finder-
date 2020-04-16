@@ -1,17 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from 'prop-types'
 
-export class Useritem extends Component {
-state = {
-      id: "id",
-      login: "Sir Zeeshan Hanif",
-      avatar_url:
-        "https://avatars2.githubusercontent.com/u/1311782?s=400&u=4b0e53d7ce7765fa39606af1a6bf30ecc3840562&v=4",
-      html_url: "https://github.com/zeeshanhanif",
-    
-  }
 
-  render() {
-      const {id, login , avatar_url , html_url} = this.state;  // this var will help to remove extra this.state code from component
+const UserItem = ({user: {login , avatar_url , html_url}}) =>  {
+   // const {} = props.user;  // this var will help to remove extra this.state code from component
     return (
       <div className="card text-center">
         <img
@@ -28,7 +20,10 @@ state = {
         </div>
       </div>
     );
-  }
-}
 
-export default Useritem;
+  }
+
+  UserItem.props = {
+    user: PropTypes.object.isRequired,
+  }
+export default UserItem;
