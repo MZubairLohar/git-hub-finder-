@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 export class Search extends Component {
     state ={
         test:'',
@@ -35,4 +36,4 @@ export class Search extends Component {
     }
 }
 
-export default Search
+export default Search;
