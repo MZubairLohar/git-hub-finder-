@@ -11,12 +11,13 @@ class App extends Component {
       users: [],
       loading:false,
     };
+    
     async componentDidMount(){
       this.setState({loading: true});
       const res = await axios.get('https://api.github.com/users');
       this.setState({ users: res.data, loading: false});
     }
-    
+
     searchUsers = async (text) => {
       this.setState({loading: true });
       const res = await axios.get(
