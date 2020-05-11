@@ -16,6 +16,7 @@ class App extends Component {
       const res = await axios.get('https://api.github.com/users');
       this.setState({ users: res.data, loading: false});
     }
+    
     searchUsers = async (text) => {
       this.setState({loading: true });
       const res = await axios.get(
