@@ -1,6 +1,7 @@
 import React from 'react';
-import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
+//import Repos from '../repos/Repos';
+import UserItem from './UserItem';
 import PropTypes from 'prop-types';
 
 const Users = ({ users, loading }) => {
