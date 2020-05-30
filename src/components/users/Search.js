@@ -33,20 +33,21 @@ const Search = ({searchUsers, showClear, clearUsers, setAlert}) => {
                 value='Search'
                 className='btn btn-dark btn-block'
                 />
-                </form>
+               
                 {showClear && (
                     <button className='btn btn-dark btn-block' onClick={clearUsers}>
                         Clear
                         </button>
                 )}
+                 </form>
             </div>
         );
     }
 
-// Search.propTypes = {
-//         searchUsers: PropTypes.func.isRequired,
-//         clearUsers: PropTypes.func.isRequired,
-//         showClear: PropTypes.bool.isRequired,
-//         setAlert: PropTypes.func.isRequired
-//     };
+Search.propTypes = {
+        searchUsers: PropTypes.func.isRequired,
+        clearUsers: PropTypes.func.isRequired,
+        showClear: PropTypes.bool.isRequired,
+        setAlert: PropTypes.func.isRequired
+    };
 export default Search;
